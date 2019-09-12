@@ -1,13 +1,17 @@
 package com.milnesium;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
-    public static void main( String[] args )
+    public static void main()
     {
-        System.out.println( "Hello World!" );
+
+        Human man = new Human();
+        man.setName("Lorin");
+        man.setCurrentAge(26);
+        man.setYears(37);
+        man.doSum(man.getCurrentAge(), man.getYears());
+
+        System.out.println(man.getName());
     }
 }
