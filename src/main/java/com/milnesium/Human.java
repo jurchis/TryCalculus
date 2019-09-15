@@ -1,39 +1,42 @@
 package com.milnesium;
 
-public class Human {
+public class Human extends Creature{
 
-    private String name;
-    private int currentAge;
-    private int years;
+    private boolean feelings;
+    private int feelingsLevel;
+    private static final double massCoefficient = 1;
 
-    public String getName() {
-        return name;
+    public int increaseFeelings(int feelingsLevel, int increase){
+        int feelingsSum;
+        feelingsSum=feelingsLevel+increase;
+        System.out.println("New feelings level: "+ feelingsSum);
+        return feelingsSum;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int decreaseFeelings(int feelingsLevel, int decrease){
+        int feelingsDif;
+        feelingsDif = feelingsLevel - decrease;
+        System.out.println("New feelings level: " + feelingsDif);
+        return feelingsDif;
     }
 
-    public int getCurrentAge() {
-        return currentAge;
+    public boolean isFeelings() {
+        return feelings;
     }
 
-    public void setCurrentAge(int currentAge) {
-        this.currentAge = currentAge;
+    public void setFeelings(boolean feelings) {
+        this.feelings = feelings;
     }
 
-    public int getYears() {
-        return years;
+    public int getFeelingsLevel() {
+        return feelingsLevel;
     }
 
-    public void setYears(int years) {
-        this.years = years;
+    public void setFeelingsLevel(int feelingsLevel) {
+        this.feelingsLevel = feelingsLevel;
     }
 
-    public int doSum(int currentAge, int years) {
-        int sum;
-        sum=currentAge+years;
-        return sum;
+    public static double getMassCoefficient() {
+        return massCoefficient;
     }
-
 }
