@@ -13,8 +13,21 @@ public class Human extends Creature{
         return feelingsSum;
     }
 
+    public double increaseFeelings(double feelingsLevel, double increase){
+        double feelingsSum;
+        feelingsSum=feelingsLevel+increase;
+        System.out.println("New feelings level: "+ feelingsSum);
+        return feelingsSum;
+    }
+
     public int decreaseFeelings(int feelingsLevel, int decrease){
         int feelingsDif;
+        feelingsDif = feelingsLevel - decrease;
+        System.out.println("New feelings level: " + feelingsDif);
+        return feelingsDif;
+
+    }  public double decreaseFeelings(double feelingsLevel, double decrease){
+        double feelingsDif;
         feelingsDif = feelingsLevel - decrease;
         System.out.println("New feelings level: " + feelingsDif);
         return feelingsDif;

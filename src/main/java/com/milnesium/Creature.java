@@ -51,7 +51,14 @@ public class Creature {
     public int doSum(int currentAge, int years) {
         int sum;
         sum = currentAge + years;
+        System.out.println(getName() + " has " + currentAge + " years and will have " + sum + " years in " +
+                years + " years!");
+        return sum;
+    }
 
+    public double doSum(double currentAge, double years) {
+        double sum;
+        sum = currentAge + years;
         System.out.println(getName() + " has " + currentAge + " years and will have " + sum + " years in " +
                 years + " years!");
         return sum;
@@ -64,8 +71,24 @@ public class Creature {
         return  massProduct;
     }
 
+    public int multiplyMass(int mass, int massCoefficient){
+        int massProduct;
+        massProduct=mass*massCoefficient;
+        System.out.println(getName()+" has the mass of "+massProduct);
+        return  massProduct;
+    }
+
+
+
     public double massModulo(int mass, double massCoefficient){
         double massModuloVar;
+        massModuloVar=mass%massCoefficient;
+        System.out.println(getName() + " has a mass module of: "+massModuloVar);
+        return massModuloVar;
+    }
+
+    public int massModulo(int mass, int massCoefficient){
+        int massModuloVar;
         massModuloVar=mass%massCoefficient;
         System.out.println(getName() + " has a mass module of: "+massModuloVar);
         return massModuloVar;
@@ -79,6 +102,13 @@ public class Creature {
     }
 
     public int decrementIntelligence(int iq){
+
+        iq--;
+        System.out.println(getName()+" new iq is: " + iq);
+        return(iq);
+    }
+
+    public double decrementIntelligence(double iq){
 
         iq--;
         System.out.println(getName()+" new iq is: " + iq);

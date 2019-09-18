@@ -8,10 +8,19 @@ public class Alien extends Creature{
 
     @Override
     public int doSum(int currentAge, int years) {
-
         int alienYears;
         alienYears = years / 2;
         int alienSum = currentAge + alienYears;
+        System.out.println(getName() + " has " + currentAge + " years and will have " + alienSum + " years in " +
+                years + " human years!");
+        return alienSum;
+    }
+
+    @Override
+    public double doSum(double currentAge, double years) {
+        double alienYears;
+        alienYears = years / 2;
+        double alienSum = currentAge + alienYears;
         System.out.println(getName() + " has " + currentAge + " years and will have " + alienSum + " years in " +
                 years + " human years!");
         return alienSum;
